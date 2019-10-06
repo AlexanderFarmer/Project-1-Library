@@ -97,12 +97,6 @@ public:
 			copy.pop();
 		}
 		sort(prioritized.begin(), prioritized.end());
-		for (int i = 0; i < prioritized.size(); i++)
-		{
-			new_copy.push(prioritized.at(i));
-			cout << prioritized.at(i).get_name() << prioritized.at(i).get_priority() << " " << prioritized.at(i).get_retain() << " " << prioritized.at(i).get_wait() <<endl;
-
-		}
 		circulation_list = new_copy;
 		
 	}
@@ -144,6 +138,7 @@ public:
 				{
 					circulation.at(i).new_reader(active_employee.at(j));
 				}
+				break;
 			}
 
 		}
@@ -167,6 +162,7 @@ public:
 					archived.push_back(circulation.at(i));
 					circulation.erase(circulation.begin() + i);
 				}
+				break;
 			}
 
 		}
